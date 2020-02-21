@@ -45,5 +45,19 @@ O(1) + O(1) + O(1) + O(n)
 The runtime of `bunnyEars` is **O(n)**
 
 ## Exercise II
+let n = number of floors
+let e = egg to be thrown
+let f - 1 = optimal height at which egg is not broken
 
+1. Find median of n
+2. Split n into 2 halves based on the median - n1 and n2
+3. At each median of n1 and n2, throw egg
+4. If egg breaks in n1, it means f - 1 is not in n1
+    i. Repeat steps 1 to 3 till egg does not break
 
+5. If egg breaks in n2, discard this case
+    If not, Repeat steps 1 to 3 till egg does not break
+6. Once we discover egg does not break in a particular case or set  
+    Repeat steps 1 to 3 to find the optimal point at which we can throw the most eggs
+
+The runtime of this algorithm is **O(log n)** since we recurse based on the median of the given n
