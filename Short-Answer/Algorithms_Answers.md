@@ -5,12 +5,12 @@
 a)
 ```python
 a)  a = 0                   # O(1)
-    while (a < n * n * n):  # O(n) * O(1)
+    while (a < n * n * n):  # O(n^3) * O(1)
       a = a + n * n         # O(1)
 ```
 The _a_ assignment is a constant of O(1) in both instances.
-The while loop is of _O(n)_.
-The entire runtime of this code will thus be **O(n)** after removing all instances of constants.
+The while loop is of _O(n^3)_ since n is cubed at that section.
+The entire runtime of this code will thus be **O(n^3)** after removing all instances of constants.
 
 b)
 ```python
@@ -42,7 +42,7 @@ Summing it all up, we have:
 ```
 O(1) + O(1) + O(1) + O(n)
 ```
-The runtime of `bunnyEars` is **O(n)**
+The runtime of `bunnyEars` is **O(n)** since for each bunny, the algorithm runs again
 
 ## Exercise II
 let n = number of floors
